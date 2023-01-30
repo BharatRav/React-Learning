@@ -16,33 +16,35 @@
 
         const name ="Bharat";
         const instaID = '_bharat18';
-        const nameElement = React.createElement(
-            "h1",
-            null,
-            name
-        )
 
-        const idElement = React.createElement(
-            "h3",
-            null,
-            instaID
-        )
+        function nameElement(props) {
+            return React.createElement(
+                "h1",
+                null,
+                props.name
+            )
+        }
+        
+        function idElement(props) {
+            return React.createElement(
+                "h3",
+                null,
+                props.instaID
+            )
+        }
+        
 
         const wrapperElement = React.createElement(
             "div",
             {id:"container"},
-            nameElement,
-            instaID
+            React.createElement(nameElement,{name: "bharatdd"}),
+            React.createElement(idElement, {instaID:"_bharat18"}),
         )
 
         ReactDOM.render (
             wrapperElement,
             document.getElementById("app")
         )
-
-
-
-        // link of this eg:- https://gist.github.com/tylermcginnis/36bef882bfc1b939b700ea87efa62db6
     </script>
 </body>
 </html>
