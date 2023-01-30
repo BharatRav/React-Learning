@@ -9,11 +9,28 @@
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 </head>
 <body>
-    <div class="app">Hello</div>
+    <div id="app"></div>
 
     <script>
-        console.log('Test');
-        console.log('React',window.React,window.React);
+        // console.log('Test');
+        // console.log('React',window.React,window.React);
+
+        const headerElement = React.createElement(      //creating element 
+            "h1",                                                           // what i want to create
+            {id: "header", },       // setting attribute    
+            "Hello World!"                                              // children of h1 tag of the data inside it it may be text or element
+        )
+
+
+        // console.log(headerElement);
+
+
+        ReactDOM.render(
+            headerElement,                          //what component i hv to render
+            document.getElementById("app")          // where i shoud be render in index.html file
+        )
+
+        
     </script>
 </body>
 </html>
