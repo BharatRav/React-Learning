@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>       <!--if im using jsx then i hv to add it-->
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+
+        // const name ="Bharat";
+        // const instaID = '_bharat18';
+
+        //need of jsx
+        //if im return html tags from components then use jsx
+        //because ReactcreateElement is so hectic simple return  tag
+        //and use comoponent as a html tag eg:- <nameElement/>
+        //and give script type as text/babel
+        function NameElement(props) {
+            return <h1>
+                {props.name}
+                </h1>
+        }
+        
+        function IdElement(props) {
+            return <h3>{props.instaID}</h3>
+            
+        }
+        
+
+        function App(){
+           
+            return (<div id="container">
+                    <NameElement  name ="bharat"/>
+                    <IdElement  instaID="_bharat18"/>
+                </div>
+        )}
+
+        ReactDOM.render (
+            <App />,
+            document.getElementById("app")
+        )
+        console.log(App)
+    </script>
+</body>
+</html>
