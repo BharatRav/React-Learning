@@ -31,11 +31,18 @@
 
         //now im using class  APP
         class App extends React.Component {
+            constructor(props) {
+                super(props);
+
+                this.state = {
+                    friends: ['Jordyn','Mikenzi','Jake']
+                }
+            }
             render() {
-                const friends =['Jordyn','Mikenzi','Jake'];
+                
             return(
                 <div id ="container">
-                    <FriendsList list ={friends} />
+                    <FriendsList list ={this.state.friends} />
                 </div>
                 )
             }
