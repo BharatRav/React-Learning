@@ -19,7 +19,7 @@
         function FriendsList(props) {
             return (
                 <ul>
-                    {props.list.map((name)=> (
+                    {props.list.map((name)=> (              //here for map im using () on behalf of {} reason ES6
                         <li key ={name}>
                             {name}
                         </li>
@@ -28,14 +28,27 @@
             )
         }
 
-        function App() {
-            const friends =['Jordyn','Mikenzi','Jake'];
+
+        //now im using class  APP
+        class App extends React.Component {
+            render() {
+                const friends =['Jordyn','Mikenzi','Jake'];
             return(
                 <div id ="container">
                     <FriendsList list ={friends} />
                 </div>
                 )
             }
+        }
+
+        // function App() {
+        //     const friends =['Jordyn','Mikenzi','Jake'];
+        //     return(
+        //         <div id ="container">
+        //             <FriendsList list ={friends} />
+        //         </div>
+        //         )
+        //     }
 
         ReactDOM.render(
             <App/>,
